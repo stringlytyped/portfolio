@@ -1,0 +1,21 @@
+.work-nav {
+  margin: 20px 0;
+
+  &_back:link, &_back:visited {
+    font-size: 18px;
+    text-decoration: none;
+    color: #3b74bd;
+  }
+
+  &_back:before {
+    content: '← ';
+  }
+
+  &_back:hover {
+    border-bottom: 1px solid #3b74bd;
+  }
+
+  &_back:hover:before {
+    border-bottom: 1px solid white;
+  }
+}

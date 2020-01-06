@@ -1,0 +1,15 @@
+---
+---
+<h1>Juan's Portfolio</h1>
+<p>{{site.description | markdownify}}</p>
+
+<p>Below is a selection of some of the projects I've worked on. You can also find me on <a href="https://www.linkedin.com/in/jsnyman/">LinkedIn</a> and <a href="https://github.com/stringlytyped">GitHub</a>.</p>
+<div class="work-list">
+{% assign sorted-works = site.works | sort: 'date' | reverse %}
+{% for work in sorted-works %}
+  <article class="work-list_item">
+    <h3><a href="{{work.url}}">{{work.title}}</a></h3>
+    <p>{{ work.excerpt | strip_html | truncate: 300}} <a class="work-list_read-more" href="{{work.url}}">Read more</a></p>
+  </article>
+{% endfor %}
+</div>

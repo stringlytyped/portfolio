@@ -1,0 +1,77 @@
+.work-header {
+  @include respond-to("small-tablet-up") {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_type:after {
+    @include hide-visually;
+    content: ':';
+  }
+
+  &_type {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 10px 15px 10px 25px;
+    font-weight: normal;
+    font-size: 28px;
+  }
+
+  &_title {
+    display: block;
+    border-left: 10px solid black;
+    font-size: 42px;
+    padding: 10px 15px;
+  }
+
+  &_jumps {
+    margin: 27px 0;
+
+    @include respond-to("small-tablet-up") {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+  }
+
+  &_jump-btn {
+    display: inline-block;
+    padding: 2px 10px 5px 10px;
+    margin-top: 10px;
+  }
+
+  &_jump-btn:first-child {
+    margin-top: 0;
+  }
+
+  &_jump-btn:before {
+    content: '→';
+    display: inline-block;
+    width: 14px;
+    margin-right: 10px;
+    overflow: hidden;
+    direction: rtl;
+    position: relative;
+    top: 1px;
+  }
+
+  &_jump-btn:link, &_jump-btn:visited {
+    background-color: #3b74bd;
+    color: white;
+    text-decoration: none;
+  }
+
+  &_jump-btn[href^='https://github.com']:link, &_jump-btn[href^='https://github.com']:visited {
+    background-color: #F05033;
+  }
+
+  &_jump-btn:hover {
+    opacity: 0.8;
+  }
+
+  &_jump-btn:hover:before {
+    width: 19px;
+    margin-right: 5px;
+  }
+}

@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article>
+  <nav class="work-nav">
+    <a class="work-nav_back" href="/">Back to portfolio</a>
+  </nav>
+  {% responsive_image_block %}
+    path: {{ page.image | slice: 1, page.image.size }}
+  {% endresponsive_image_block %}
+  <header class="work-header">
+    <h1>
+      <span class="work-header_type">
+        {% case page.type %}
+          {% when "website" %}
+            Website
+        {% endcase %}
+      </span>
+      <span class="work-header_title">
+        {{page.title}}
+      </span>
+    </h1>
+    <div class="work-header_jumps">
+      {% if page.site %}
+        <a class="work-header_jump-btn" href="{{page.site}}">Visit site</a>
+      {% endif %}
+      {% if page.github %}
+        <a class="work-header_jump-btn" href="{{page.github}}">GitHub</a>
+      {% endif %}
+    </div>
+  </header>
+  {{content}}
+</article>
