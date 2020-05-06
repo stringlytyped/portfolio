@@ -10,7 +10,7 @@ Lawn Guru is a family-owned landscaping company located in the greater Vancouver
 
 ## Quote request and lead tracking system
 
-New customers can request a quote for services using an interactive form with custom form controls (shown above). This approach makes the process more engaging and less of a chore.
+New customers can request a quote for services using an interactive form with custom form controls (shown above). This approach is designed to make the process engaging and fun, rather than a chore.
 
 Once the quote request form is submitted, employees of the company receive a text message (SMS) notification to their phones. Clicking a link in the message takes them directly to a page with the customers' contact details and other information about the lead. This allows them to follow up quickly, even from a job site.
 
